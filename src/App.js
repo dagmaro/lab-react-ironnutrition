@@ -55,19 +55,19 @@ function App() {
     <div
       className="App"
       style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-        alignItems: 'center',
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <h1>Food List</h1>
-      <div className="main-container" style={{ width: '100%' }}>
+      <div className="main-container" style={{ width: "100%" }}>
         <button className="form-button" onClick={popForm}>
-          {displayForm === true ? 'Hide form :(' : 'Add new foody!'}
+          {displayForm === true ? "Hide form :(" : "Add new foody!"}
         </button>
         <div
-          className="top-container" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+          className="top-container" style={{display: "flex", justifyContent: "space-between", alignItems: "center",
           }}
         ></div>
         {displayForm === true ? (<AddFoodForm addNewProduct={addNewProduct} />) : null}
@@ -79,7 +79,7 @@ function App() {
           <div
             className="main-container"
             key={eachProduct.name}
-            style={{ width: '33.33%' }}
+            style={{ width: "33.33%" }}
           >
             <FoodBox food={eachProduct} deleteFood={deleteFood} />
           </div>
