@@ -39,7 +39,7 @@ function AddFoodForm(props) {
     <div>
         <form onSubmit={submitNewFood}>
             <label htmlFor="name">Name </label>
-            <input type="text" value={foodNameInput} onChange={handleNameFood} />
+            <input type="text" placeholder="Tasty Foooood!" value={foodNameInput} onChange={handleNameFood} />
             <br />
             <label htmlFor="image">Image </label>
             <input type="text" placeholder="https://i.imgur.com/eTmWoAN.png" value={foodImageInput} onChange={(event) => {
@@ -52,7 +52,7 @@ function AddFoodForm(props) {
             <label htmlFor="servings">Servings </label>
             <input type="number" value={foodServingsInput} onChange={handleServingsFood}/>
             <br />
-            <button>Create</button>
+            <button className="create-button">Create</button>
 
         </form>
     </div>

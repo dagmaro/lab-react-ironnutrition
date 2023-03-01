@@ -12,7 +12,7 @@ function SearchProduct(props) {
     <div>
         <h3>Search some product</h3>
         <label htmlFor="search">Look for some tatsy food! </label>
-        <input type="text" name="search" value={searchInput} onChange={handleSearch} />
+        <input type="text" placeholder="ñam ñam" name="search" value={searchInput} onChange={handleSearch} />
     </div>
   )
 }
