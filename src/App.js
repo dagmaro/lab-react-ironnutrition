@@ -52,23 +52,36 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h3>Food List</h3>
-      <button className="form-button" onClick={popForm}>
-        {displayForm === true ? 'Hide form :(' : 'Add new foody!'}
-      </button>
-      {displayForm === true ? (
-        <AddFoodForm addNewProduct={addNewProduct} />
-      ) : null}
+    <div
+      className="App"
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <h1>Food List</h1>
+      <div className="main-container" style={{ width: '100%' }}>
+        <button className="form-button" onClick={popForm}>
+          {displayForm === true ? 'Hide form :(' : 'Add new foody!'}
+        </button>
+        <div
+          className="top-container" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+          }}
+        ></div>
+        {displayForm === true ? (<AddFoodForm addNewProduct={addNewProduct} />) : null}
+        <SearchProduct filterfood={filterfood} />
+      </div>
 
-      <SearchProduct filterfood={filterfood} />
       {displayFood.map((eachProduct) => {
         return (
-          <div className="main-container" key={eachProduct.name}>
-            <FoodBox
-              food={eachProduct}
-              deleteFood={deleteFood}
-            />
+          <div
+            className="main-container"
+            key={eachProduct.name}
+            style={{ width: '33.33%' }}
+          >
+            <FoodBox food={eachProduct} deleteFood={deleteFood} />
           </div>
         );
       })}

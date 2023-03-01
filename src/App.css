@@ -37,25 +37,19 @@ button {
   color: black;
 }
 
-.main-container {
-  display: flex;
-  
-}
-
 
 .food-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   border: 1px solid;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 225px 15px;
+  border-top-right-radius: 15px 255px;
   margin: 20px;
+  vertical-align: top;
   padding: 10px;
-  width: calc(33.3% - 40px)
 }
 
-.in-order-container {
- text-align: center;
- 
-}
+
 

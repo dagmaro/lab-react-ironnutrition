@@ -6,7 +6,7 @@ function FoodBox(props) {
   return (
     <div className="food-container">
       <img src={food.image} alt="comidita" width="150px" height="100px" />
-      <div className="in-order-container">
+      <div>
         <h3>{food.name}</h3>
         <p>Calories: {food.calories}kcal</p>
         <p>Servings: {food.servings}</p>
