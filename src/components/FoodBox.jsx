@@ -1,6 +1,9 @@
 function FoodBox(props) {
-    const {food} = props
-  return (
+    const {food, deleteFood} = props
+    const deleteProduct =() => {
+      deleteFood(food.name)
+    }
+      return (
     <div>
         <h3>{food.name}</h3>
         <img src={food.image} alt="comidita" width="150px" />
@@ -10,7 +13,7 @@ function FoodBox(props) {
             <b>Total Calories: {food.calories * food.servings}kcal</b>
         </p>
 
-        <button>Delete</button>
+        <button onClick={deleteProduct}>Delete</button>
         
     </div>
   )

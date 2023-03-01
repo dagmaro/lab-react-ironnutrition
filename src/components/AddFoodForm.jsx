@@ -33,6 +33,7 @@ function AddFoodForm(props) {
             servings: foodServingsInput
         }
         props.addNewProduct(newProduct)
+        console.log(newProduct)
     }
   return (
     <div>
